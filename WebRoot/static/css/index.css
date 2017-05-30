@@ -1,0 +1,138 @@
+html, body {
+	height: 100%;
+	background-color: #333;
+	overflow-y: hidden;
+}
+
+body {
+	text-align: center;
+}
+/* 
+	����
+*/
+.progress-loadImgs {
+	width: 100%;
+	max-width: 600px;
+	height: 40px;
+	margin: 0 auto;
+}
+
+.progress-loadImgs span {
+	font-size: 30px;
+	line-height: 40px;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, .5);
+}
+
+.loading-container {
+	z-index: 3000;
+	width: 100%;
+	height: 100%;
+	background-color: #33CC99;
+	position: absolute;
+	display: none;
+}
+
+.loading-container h2 {
+	padding-top: 40vh;
+	text-align: center;
+	font-size: 5em;
+	font-weight: 800;
+	font-family: "Microsoft YaHei";
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, .5);
+}
+
+.cover-site {
+	display: table;
+	width: 100%;
+	height: 100%;
+	text-shadow: 2px 2px 5px rgba(255, 255, 255, .4);
+}
+
+.cover-site-inner {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.cover-container {
+	margin: 0 auto
+}
+
+.inner {
+	padding: 30px;
+	color: #fff;
+}
+
+.cover {
+	padding: 0 20px;
+	display: none;
+}
+
+.cover .btn-lg {
+	padding: 10px 20px;
+	font-weight: bold;
+}
+
+.cover-heading+.lead {
+	font-family: "Microsoft LiShu";
+	margin-top: 20px;
+}
+
+.cover-foot {
+	color: #999;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+/*
+	�����޸�
+*/
+#text {
+	animation-delay: 1s;
+	-o-animation-delay: 1s;
+	-ms-animation-delay: 1s;
+	-moz-animation-delay: 1s;
+	-webkit-animation-delay: 1s;
+}
+
+#contactBtn {
+	animation-delay: 2s;
+	-o-animation-delay: 2s;
+	-ms-animation-delay: 2s;
+	-moz-animation-delay: 2s;
+	-webkit-animation-delay: 2s;
+}
+
+@media ( min-width : 992px) {
+	.cover-foot, .cover-container {
+		width: 992px;
+	}
+}
+/* Toast */
+#toast{
+  z-index: 20000;
+  position: fixed;
+  display: none;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 5rem;
+  padding: 1rem 2rem;
+  background-color: rgba(0,0,0,.6);
+  border-radius: .5rem;
+  box-sizing: border-box;
+  border: 2px solid rgba(230,230,230,.5);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+#toast p{
+  line-height: 1.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0;
+  color: #FFF;
+  text-shadow: 2px 2px 4px #444;
+}
