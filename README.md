@@ -22,7 +22,7 @@
     
     1. 超级管理员 帐号：_admin_  登录密码：_admin123456_  
       
-    2. 访问后台 http://qianchengjie.cn/cms  
+    2. [访问后台](http://qianchengjie.cn/cms  "点击链接访问后台")  
       
     3. 权限管理工具在用户管理界面左下角，每一个角色更改后先应用，再切换另一个角色。 
       
