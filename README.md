@@ -17,5 +17,5 @@
     
 ### 三、网站指引
     
-    1.超级管理员 帐号：_admin_  登录密码：_admin123456_
-    2.访问后台 http://qianchengjie.cn/cms
+    *1.超级管理员 帐号：_admin_  登录密码：_admin123456_
+    *2.访问后台 http://qianchengjie.cn/cms
