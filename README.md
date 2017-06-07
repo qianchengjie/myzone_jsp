@@ -2,7 +2,7 @@
  
 ### 一、网站地址
     
-    http://qianchengjie.cn 
+    [访问首页](http://qianchengjie.cn "点击链接访问首页")
 
 
 
