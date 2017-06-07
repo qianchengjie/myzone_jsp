@@ -15,6 +15,7 @@ import model.blackboard.Floor;
 import model.blackboard.Reply;
 import service.BlackboardService;
 import service.UserService;
+import util.AjaxJSON;
 import util.Param2Bean;
 import util.StringUtil;
 
@@ -25,6 +26,7 @@ public class BlackboardController extends HttpServlet {
 	
 	private StringUtil su = new StringUtil();
 	private Param2Bean p2b = new Param2Bean();
+	private AjaxJSON aj = new AjaxJSON();
 	
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 

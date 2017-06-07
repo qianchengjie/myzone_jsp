@@ -7,10 +7,10 @@
 	<meta name="baidu-site-verification" content="3TrUNal9aB">
 	<c:import url="base.jsp"></c:import>
 	<!-- Loading my css -->
-	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/index.css">
+	<link rel="stylesheet" type="text/css" href="static/css/index.css">
 	<!-- Loading my js -->
-	<script src="${pageContext.request.contextPath}/static/js/onloadImgs.js"></script>
-	<script src="${pageContext.request.contextPath}/static/js/index.js"></script>
+	<script src="static/js/onloadImgs.js"></script>
+	<script src="static/js/index.js"></script>
 </head>
 <body>
 	

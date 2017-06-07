@@ -157,11 +157,3 @@ $(document).ready(function(){
 		});
 	})
 });
-
-function exit(){
-	$.post('user/logout',
-		function(data){
-			window.location.href = "/";
-		}
-	);
-}

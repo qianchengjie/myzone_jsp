@@ -3,19 +3,19 @@
 <head>
 	<title>留言板</title>
 	<c:import url="base.jsp"></c:import>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/wangEditor.min.css">
-	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/blackboard.css">
+    <link rel="stylesheet" type="text/css" href="static/css/wangEditor.min.css">
+	<link rel="stylesheet" type="text/css" href="static/css/blackboard.css">
 	<!-- 导入js -->
-    <script src="${pageContext.request.contextPath}/static/js/wangEditor.js"></script>
-    <script src="${pageContext.request.contextPath}/static/js/plupload.full.min.js"></script>
-    <script src="${pageContext.request.contextPath}/static/js/zh_CN.js"></script>
-    <script src="${pageContext.request.contextPath}/static/js/qiniu.js"></script>
-	<script src="${pageContext.request.contextPath}/static/js/blackboard.js"></script>
+    <script src="static/js/wangEditor.js"></script>
+    <script src="static/js/plupload.full.min.js"></script>
+    <script src="static/js/zh_CN.js"></script>
+    <script src="static/js/qiniu.js"></script>
+	<script src="static/js/blackboard.js"></script>
 	
 	<c:choose>
-	<c:when test="${right == 0 }"><script src="${pageContext.request.contextPath}/static/js/blackboard/0.js"></script></c:when>
-	<c:when test="${right == 2 }"><script src="${pageContext.request.contextPath}/static/js/blackboard/2.js"></script></c:when>
-	<c:when test="${right == 3 }"><script src="${pageContext.request.contextPath}/static/js/blackboard/3.js"></script></c:when>
+	<c:when test="${right == 0 }"><script src="static/js/blackboard/0.js"></script></c:when>
+	<c:when test="${right == 2 }"><script src="static/js/blackboard/2.js"></script></c:when>
+	<c:when test="${right == 3 }"><script src="static/js/blackboard/3.js"></script></c:when>
 	</c:choose>
 </head>
 <body>

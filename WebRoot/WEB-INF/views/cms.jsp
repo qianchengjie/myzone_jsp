@@ -5,40 +5,41 @@
 <head>
   <title>后台管理中心</title>
   	<meta charset="utf-8">
+  	<base href="${pageContext.request.contextPath}/" />
 	<meta name="viewport" content="width=device-width, initial-scale=0.7,user-scalable=no">
 	
 	<!-- Loading jquery-->
-	<script src="${pageContext.request.contextPath}/static/js/jquery.min.js"></script>
+	<script src="static/js/jquery.min.js"></script>
 	
 	<!-- Loading bootstrap-->
-	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/bootstrap.min.css">
-	<script src="${pageContext.request.contextPath}/static/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+	<script src="static/js/bootstrap.min.js"></script>
 	
 	<!-- Loading animated -->
-	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="static/css/animate.min.css">
 	
 	<!-- Shortcut Icon -->
 	<link rel="Shortcut Icon" href="http://oq7avxrj8.bkt.clouddn.com/images/web.ico"/>
 	
-    <script src="${pageContext.request.contextPath}/static/js/plupload.full.min.js"></script>
-    <script src="${pageContext.request.contextPath}/static/js/zh_CN.js"></script>
-    <script src="${pageContext.request.contextPath}/static/js/qiniu.js"></script>
+    <script src="static/js/plupload.full.min.js"></script>
+    <script src="static/js/zh_CN.js"></script>
+    <script src="static/js/qiniu.js"></script>
     
-	  <script src="${pageContext.request.contextPath}/static/js/cms.js"></script>
-	  <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/cms.css">
+	  <script src="static/js/cms.js"></script>
+	  <link rel="stylesheet" type="text/css" href="static/css/cms.css">
 	  
 	  
 	  <c:if test="${right7 }">
-	  <script src="${pageContext.request.contextPath}/static/js/cms/file7.js"></script>
+	  <script src="static/js/cms/file7.js"></script>
 	  </c:if>
 	  <c:if test="${right8 }">
-	  <script src="${pageContext.request.contextPath}/static/js/cms/file8.js"></script>
+	  <script src="static/js/cms/file8.js"></script>
 	  </c:if>
 	  <c:if test="${right5 }">
-	  <script src="${pageContext.request.contextPath}/static/js/cms/user5.js"></script>
+	  <script src="static/js/cms/user5.js"></script>
 	  </c:if>
 	  <c:if test="${right6 }">
-	  <script src="${pageContext.request.contextPath}/static/js/cms/user6.js"></script>
+	  <script src="static/js/cms/user6.js"></script>
 	  </c:if>
 	  
 </head>
@@ -144,7 +145,7 @@
                   <div class="col-xs-3">
                     <div id="get-excel">
                       <a href="data/getUserExcel" target="_blank">
-                        <img src="${pageContext.request.contextPath}/static/svg/excel.svg"><br />
+                        <img src="static/svg/excel.svg"><br />
                       	  获取用户Excel
                       </a>
                     </div>
@@ -152,7 +153,7 @@
                   <div class="col-xs-3">
                     <div id="get-pdf">
                       <a href="data/getUserPdf" target="_blank">
-                        <img src="${pageContext.request.contextPath}/static/svg/pdf.svg"><br />
+                        <img src="static/svg/pdf.svg"><br />
                      	   获取用户及日志PDF
                       </a>
                     </div>
@@ -160,7 +161,7 @@
                   <div class="col-xs-3">
                     <div id="upload-excel">
                       <a href="data" target="_blank">
-                        <img src="${pageContext.request.contextPath}/static/svg/excel.svg"><br />
+                        <img src="static/svg/excel.svg"><br />
                         	上传用户Excel
                       </a>
                     </div>
@@ -168,7 +169,7 @@
                   <div class="col-xs-3">
                       <div id="get-word">
                         <a href="data/getWord" target="_blank">
-                          <img src="${pageContext.request.contextPath}/static/svg/word.svg"><br />
+                          <img src="static/svg/word.svg"><br />
                         	获得WORD模板
                         </a>
                       </div>
@@ -186,23 +187,23 @@
             	<c:if test="${right7 }">
             	<div id="file-tools">
             		<span id="mkdir-tool" class="tooltips" data-toggle="tooltip" data-placement="top" title="新建文件夹" data-tigger="hover">
-            			<img src="${pageContext.request.contextPath}/static/svg/newfolder.svg" />
+            			<img src="static/svg/newfolder.svg" />
             		</span>
             		<span id="upload-tool" class="tooltips" data-toggle="tooltip" data-placement="top" title="上传文件" data-tigger="hover">
-            			<img src="${pageContext.request.contextPath}/static/svg/upload.svg" />
+            			<img src="static/svg/upload.svg" />
             		</span>
             		<span id="download-tool" class="tooltips" data-toggle="tooltip" data-placement="top" title="下载文件" data-tigger="hover">
-            			<img src="${pageContext.request.contextPath}/static/svg/download.svg" />
+            			<img src="static/svg/download.svg" />
             		</span>
             		<span id="select-tool" class="tooltips" data-toggle="tooltip" data-placement="top" title="全选" data-tigger="hover">
-            			<img src="${pageContext.request.contextPath}/static/svg/selectNone.svg" />
+            			<img src="static/svg/selectNone.svg" />
             		</span>
             		<span id="selectFan-tool" class="tooltips" data-toggle="tooltip" data-placement="top" title="反选" data-tigger="hover">
-            			<img src="${pageContext.request.contextPath}/static/svg/selectFan.svg" />
+            			<img src="static/svg/selectFan.svg" />
             		</span>
             		<c:if test="${right8 }">
             		<span id="delete-tool" class="tooltips" data-toggle="tooltip" data-placement="top" title="删除选择项" data-tigger="hover">
-            			<img src="${pageContext.request.contextPath}/static/svg/delete.svg" />
+            			<img src="static/svg/delete.svg" />
             		</span>
             		</c:if>
             	</div>

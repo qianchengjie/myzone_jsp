@@ -246,7 +246,10 @@ public class UserService {
 		String msg = "更名成功";
 		if(newUsername.equals(user.getUsername())){
 			msg = "用户名未更改";
-		}else{
+		}else if(userDao.getUsername(newUsername) != null){
+			msg = "该用户名已存在";
+		}
+		else{
 			user.setUsername(newUsername);
 			userDao.save(user);
 		}

@@ -26,7 +26,7 @@ public class UserInfoController extends HttpServlet {
 		HttpSession ses = req.getSession();
 		RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/views/userinfo.jsp");
 		if(ses.getAttribute("username") == null){
-			res.sendRedirect("/");
+			req.getRequestDispatcher("/WEB-INF/views/index.jsp").forward(req, res);
 		}else{
 			req.setAttribute("user", userService.getUser((String)ses.getAttribute("username")));
 			rd.forward(req, res);
