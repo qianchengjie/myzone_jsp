@@ -100,6 +100,7 @@
                 </thead>
                 <tbody>
                   <c:forEach items="${userList }" var="user">
+                  <c:if test="${username != user.username }">
                   <tr>
                     <td>${user.username}</td>
                     <td>${user.rolename}</td>
@@ -122,6 +123,7 @@
                       </div>
                     </td>
                   </tr>
+                  </c:if>
                   </c:forEach>
                 </tbody>
               </table>
@@ -391,6 +393,6 @@
           </div>
         </div>
       </div>
-      
+      <input type="hidden" id="currentUsername" value="${username }">
     </body>
     </html>

@@ -77,6 +77,7 @@
 			 else if(json_obj.msg == '删除成功'){
 				 obj.addClass("animated bounceOutLeft");
 				 setTimeout(function(){
+		   			if(currentUsername!=json_obj.username)
 					 var html = "<tr><td>" + json_obj.user.username + "</td><td>" + json_obj.rolename + "</td><td>" + json_obj.user.email + "</td><td>" + json_obj.user.regDate + "</td><td><div class='btn-group'><button class='btn btn-sm btn-danger delete-user'> 删除用户</button><button class='btn btn-sm btn-info dropdown-toggle' data-toggle='dropdown'><span>" + json_obj.rolename + "</span><span class='caret'></span></button><ul class='dropdown-menu'><li><a href='#'>超级管理员</a></li><li><a href='#'>管理员</a></li><li><a href='#'>普通用户</a></li></ul></div></td></tr>";
 					 $('#user-table tbody').append(html);
 					 obj.remove();
@@ -92,5 +93,69 @@
 	 setUserPagination(currentPage);
     confirmHide();
    })
+   
+ //设置用户界面页码
+   function setUserPagination(currentPage){
+   	 var condition = $("#search").val();
+   	$.ajax({
+   		url : 'cms/getUserPageSum',
+   		method : 'post',
+   		data : {condition : condition},
+   		dataType : 'json',
+   		success : function(pageSum){
+   			setPagination(currentPage,pageSum);
+   		},
+   		 error : function(){
+   			 toast('服务器错误');
+   		 }
+   	})
+   }
+    
+   //重新设置页数
+   function setPagination(currentPage,pageSum){
+   	if(pageSum < currentPage){
+   		gotoUserPage(pageSum);
+   	}
+   	
+   	var html = "";
+   	if(currentPage != 1){
+   		html += "<li><a href='javascript:gotoUserPage(" + ( currentPage-1 )+ ")'><span>&laquo;</span></a></li>";
+   	}
+   	for( var i = 1; i <= pageSum; i++){
+   		if( i == currentPage)
+   			html += "<li class='active'><a href='#'>"+i+"</a></li>";
+   		else
+   			html += "<li><a href='javascript:gotoUserPage(" + i + ")'>"+i+"</a></li>";
+   	}
+   	if(pageSum != currentPage){
+   		html += "<li><a href='javascript:gotoUserPage(" + ( currentPage+1 )+ ")'><span >&raquo;</span></a></li>";
+   	}
+   	$('.pagination').html(html);
+   }
+   //跳转到用户页码
+   function gotoUserPage(pageNum){
+	   var currentUsername = $('#currentUsername').val();
+   	 var condition = $("#search").val();
+   	$.ajax({
+   		url : 'cms/getUserPage',
+   		method : 'post',
+   		data : {pageNum : pageNum , condition : condition},
+   		dataType : 'json',
+   		success : function(json){
+   			var html = '';
+   			 $('#user-table tbody').html('');
+   			for(var i = 0; i < json.length ; i++){
+   				var user = json[i];
+   				if(currentUsername!=user.username)
+   				html += "<tr><td>" + user.username + "</td><td>" + user.rolename + "</td><td>" + user.email + "</td><td>" + user.regDate + "</td><td><div class='btn-group'><button class='btn btn-sm btn-danger delete-user'> 删除用户</button><button class='btn btn-sm btn-info dropdown-toggle' data-toggle='dropdown'><span>" + user.rolename + " </span><span class='caret'></span></button><ul class='dropdown-menu'><li><a href='#'>超级管理员</a></li><li><a href='#'>管理员</a></li><li><a href='#'>普通用户</a></li></ul></div></td></tr>";
+   			}
+   			$('#user-table tbody').append(html);
+   		},
+   		 error : function(){
+   			 toast('服务器错误');
+   		 }
+   	})
+   	setUserPagination(pageNum)
+   }
    
 })
