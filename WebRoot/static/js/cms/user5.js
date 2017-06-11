@@ -94,6 +94,8 @@
     confirmHide();
    })
    
+})
+   
  //设置用户界面页码
    function setUserPagination(currentPage){
    	 var condition = $("#search").val();
@@ -123,7 +125,7 @@
    	}
    	for( var i = 1; i <= pageSum; i++){
    		if( i == currentPage)
-   			html += "<li class='active'><a href='#'>"+i+"</a></li>";
+   			html += "<li class='active'><a href='javascript:void(0)'>"+i+"</a></li>";
    		else
    			html += "<li><a href='javascript:gotoUserPage(" + i + ")'>"+i+"</a></li>";
    	}
@@ -157,5 +159,3 @@
    	})
    	setUserPagination(pageNum)
    }
-   
-})
